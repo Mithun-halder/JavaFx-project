@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="509.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentProfileController">
+   <children>
+      <AnchorPane prefHeight="509.0" prefWidth="272.0" style="-fx-background-color: #101820ff;">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="186.0" layoutX="70.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\user\IdeaProjects\Project\resource\Profile-Pic-Demo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="32.0" layoutY="227.0" text="Name:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="262.0" text="Id:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="297.0" text="Contact:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="34.0" layoutY="335.0" text="Email:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Text fx:id="textName" fill="WHITE" layoutX="107.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="textId" fill="WHITE" layoutX="107.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="textContact" fill="WHITE" layoutX="107.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="textEmail" fill="WHITE" layoutX="107.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="PersonalInfoBnt" layoutX="81.0" layoutY="371.0" mnemonicParsing="false" onAction="#ShowPersonaInfo" text="Personal Info" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="272.0" prefHeight="509.0" prefWidth="480.0" style="-fx-background-color: #fee715ff;">
+         <children>
+            <TableView fx:id="studentProfileTable" prefHeight="509.0" prefWidth="480.0">
+               <columns>
+                  <TableColumn fx:id="TableId" prefWidth="56.0" text="ID" />
+                  <TableColumn fx:id="TableUsername" prefWidth="76.0" text="Username" />
+                  <TableColumn fx:id="TablePassword" prefWidth="70.0" text="Password" />
+                  <TableColumn fx:id="TbaleFirstNmae" prefWidth="75.0" text="FirstName" />
+                  <TableColumn fx:id="TableLastname" prefWidth="65.0" text="LastName" />
+                  <TableColumn fx:id="TableContact" prefWidth="59.0" text="Contact" />
+                  <TableColumn fx:id="TableEmail" prefWidth="75.0" text="Email" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

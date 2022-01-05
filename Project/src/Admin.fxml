@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="537.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AdminController">
+   <children>
+      <AnchorPane prefHeight="537.0" prefWidth="229.0" style="-fx-background-color: #101820ff;">
+         <children>
+            <ImageView fitHeight="120.0" fitWidth="150.0" layoutX="45.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\Users\user\IdeaProjects\Project\resource\Profile-Pic-Demo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="adminName" layoutX="84.0" layoutY="134.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="173.0" text="Student Info" textFill="WHITE" />
+            <TextField fx:id="stId" layoutX="50.0" layoutY="205.0" prefHeight="25.0" prefWidth="110.0" promptText="ID" />
+            <TextField fx:id="stContact" layoutX="50.0" layoutY="365.0" prefHeight="25.0" prefWidth="110.0" promptText="Contact" />
+            <TextField fx:id="stFirstName" layoutX="50.0" layoutY="301.0" prefHeight="25.0" prefWidth="110.0" promptText="FirstName" />
+            <TextField fx:id="stLastName" layoutX="50.0" layoutY="333.0" prefHeight="25.0" prefWidth="110.0" promptText="LastName" />
+            <TextField fx:id="stUsername" layoutX="50.0" layoutY="237.0" prefHeight="25.0" prefWidth="110.0" promptText="Username" />
+            <TextField fx:id="stEmail" layoutX="50.0" layoutY="399.0" prefHeight="25.0" prefWidth="110.0" promptText="email" />
+            <Button fx:id="addNewStudent" layoutX="27.0" layoutY="453.0" mnemonicParsing="false" onAction="#addNew" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: white;" text="Add new" />
+            <Button fx:id="loadData" layoutX="105.0" layoutY="453.0" mnemonicParsing="false" onAction="#loadStudentData" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: white;" text="Load data" />
+            <TextField fx:id="stPassword" layoutX="50.0" layoutY="269.0" prefHeight="25.0" prefWidth="110.0" promptText="Password" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="228.0" layoutY="-1.0" prefHeight="537.0" prefWidth="546.0" style="-fx-background-color: #fee715ff;">
+         <children>
+            <TableView fx:id="studentTable" layoutY="1.0" onSort="#loadStudentData" prefHeight="537.0" prefWidth="547.0">
+               <columns>
+                  <TableColumn fx:id="dataId" prefWidth="75.0" text="ID" />
+                  <TableColumn fx:id="dataUsername" prefWidth="75.0" text="Username" />
+                  <TableColumn fx:id="dataPassword" prefWidth="75.0" text="Password" />
+                  <TableColumn fx:id="dataFirstname" prefWidth="75.0" text="FirstName" />
+                  <TableColumn fx:id="dataLastname" prefWidth="75.0" text="LastName" />
+                  <TableColumn fx:id="dataContact" prefWidth="75.0" text="Contact" />
+                  <TableColumn fx:id="dataEmail" prefWidth="75.0" text="Email" />
+               </columns></TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
